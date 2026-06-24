@@ -14,6 +14,7 @@ const Home = () => {
     } catch (e) {
       console.error(e, `errored out requesting / api`);
     }
+  };
 
   useEffect(() => {
     helloWorldApi();
@@ -35,6 +36,7 @@ const Home = () => {
       </header>
     </div>
   );
+};
 
 function App() {
   return (
