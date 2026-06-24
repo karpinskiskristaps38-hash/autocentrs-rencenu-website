@@ -21,7 +21,7 @@ const Home = () => {
 
   return (
     <div className="bg-neutral-950 text-white min-h-screen font-sans selection:bg-orange-500 selection:text-white">
-      
+      {/* HEADER / NAVIGATION */}
       <header className="border-b border-neutral-900 bg-neutral-950/90 backdrop-blur sticky top-0 z-50 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -45,7 +45,7 @@ const Home = () => {
         </div>
       </header>
 
-      
+      {/* HERO SECTION */}
       <section className="relative py-24 md:py-32 px-6 border-b border-neutral-900 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-900 via-neutral-950 to-neutral-950">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20"></div>
         <div className="max-w-7xl mx-auto relative z-10">
@@ -74,7 +74,7 @@ const Home = () => {
         </div>
       </section>
 
-      
+      {/* SERVICES SECTION */}
       <section id="pakalpojumi" className="py-24 px-6 max-w-7xl mx-auto">
         <div className="mb-16">
           <span className="text-xs font-bold tracking-widest text-orange-500 uppercase block mb-3">// Ko mēs darām</span>
@@ -106,7 +106,7 @@ const Home = () => {
         </div>
       </section>
 
-      
+      {/* REVIEWS SECTION */}
       <section id="atsauksmes" className="py-24 px-6 border-t border-neutral-900 bg-neutral-900/20">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
@@ -138,7 +138,7 @@ const Home = () => {
         </div>
       </section>
 
-      
+      {/* CONTACT & MAP SECTION */}
       <section id="atrasanas" className="py-24 px-6 max-w-7xl mx-auto border-t border-neutral-900">
         <div className="mb-16">
           <span className="text-xs font-bold tracking-widest text-orange-500 uppercase block mb-3">// Apciemo mūs</span>
@@ -179,11 +179,11 @@ const Home = () => {
               </div>
             </div>
           </div>
-          
+          {/* MAP EMBED */}
           <div className="w-100 h-96 border border-neutral-900 rounded-lg overflow-hidden bg-neutral-900">
             <iframe 
               title="Auto Centrs Rencēnu Map"
-              src="[https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x46eec7b9bc5c38bf%3A0x6b7724a10dfbecc2!2sMeir%C4%81nu%20iela%206%2C%20Latgales%20priek%C5%A1pils%C4%93ta%2C%20R%C4%ABga%2C%20LV-1073!5e0!3m2!1slv!2slv!4v1719234000000!5m2!1slv!2slv](https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x46eec7b9bc5c38bf%3A0x6b7724a10dfbecc2!2sMeir%C4%81nu%20iela%206%2C%20Latgales%20priek%C5%A1pils%C4%93ta%2C%20R%C4%ABga%2C%20LV-1073!5e0!3m2!1slv!2slv!4v1719234000000!5m2!1slv!2slv)" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x46eec7b9bc5c38bf%3A0x6b7724a10dfbecc2!2sMeir%C4%81nu%20iela%206%2C%20Latgales%20priek%C5%A1pils%C4%93ta%2C%20R%C4%ABga%2C%20LV-1073!5e0!3m2!1slv!2slv!4v1719234000000!5m2!1slv!2slv" 
               className="w-full h-full border-none grayscale invert contrast-125 opacity-80"
               allowFullScreen="" 
               loading="lazy"
@@ -192,7 +192,7 @@ const Home = () => {
         </div>
       </section>
 
-      
+      {/* CALL TO ACTION BOTTOM */}
       <section className="py-24 px-6 text-center border-t border-neutral-900 bg-gradient-to-b from-neutral-950 to-neutral-900 relative overflow-hidden">
         <div className="max-w-4xl mx-auto relative z-10">
           <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-4">Gatavs sakārtot savu auto?</h2>
@@ -203,7 +203,7 @@ const Home = () => {
         </div>
       </section>
 
-      
+      {/* FOOTER */}
       <footer className="border-t border-neutral-900 bg-neutral-950 px-6 py-8 text-xs text-neutral-500 font-medium">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
@@ -224,8 +224,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route element="{<Home" path="/"/>} />
-          <Route element="{<Home" index/>} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </div>
